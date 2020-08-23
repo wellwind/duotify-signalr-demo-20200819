@@ -1,0 +1,12 @@
+<div><button (click)="connect()">Connect</button></div>
+<div>
+  <p>Name: <input type="text" [(ngModel)]="name" /></p>
+  <p>Message: <input type="text" [(ngModel)]="message" /></p>
+  <p><button (click)="sendMessage()">Send</button></p>
+</div>
+<hr />
+<ul>
+  <li *ngFor="let message of messages">
+    {{ message.name }}: {{ message.message }}
+  </li>
+</ul>
